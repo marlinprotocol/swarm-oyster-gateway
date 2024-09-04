@@ -120,7 +120,7 @@ wget <eif url>
 #### Step 5.2: Create a job
 Navigate to the [marketplace](https://hub.marlin.org/oyster/marketplace/) page and select a chain of your choice in the dropdown to the top right. You will see a table filled with operators and the compute resources they offer which looks something like this:
 
-
+![marketplace-258522143f35c7a373486f8b009d8e7f](https://github.com/user-attachments/assets/706023ab-ca6d-475c-9faf-b925630c8977)
 
 ## Maintainers
 
