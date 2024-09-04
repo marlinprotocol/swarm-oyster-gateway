@@ -41,7 +41,7 @@ Instead of copying and pasting the server code and then installing npm packages 
 npm i -D pkg
 ```
 
-2. Create a binaryusing `pkg`:
+2. Create a binary using `pkg`:
 
 ```bash
 npx pkg -t node14-alpine app.js
