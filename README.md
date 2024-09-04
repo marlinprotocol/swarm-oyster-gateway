@@ -105,6 +105,23 @@ This command will create enclave/enclave.eif, which is the enclave image file, a
 }
 ```
 
+### Step 5: Deploy the enclave image on Oyster
+
+#### Step 5.1: Host the image where it can be publicly downloaded
+
+Upload the enclave.eif to a hosting service of your choice and make it publicly accessible.
+
+Test whether the file has been correctly hosted and is publicly accessible by running
+
+```bash
+wget <eif url>
+```
+
+#### Step 5.2: Create a job
+Navigate to the [marketplace](https://hub.marlin.org/oyster/marketplace/) page and select a chain of your choice in the dropdown to the top right. You will see a table filled with operators and the compute resources they offer which looks something like this:
+
+
+
 ## Maintainers
 
 - [Gabriel](https://github.com/gabrielaxy)
