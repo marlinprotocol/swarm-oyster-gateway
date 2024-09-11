@@ -17,4 +17,4 @@ COPY --from=base --chown=nobody:nogroup /app/node_modules node_modules
 USER nobody
 EXPOSE 3000
 
-ENTRYPOINT [ "node", "dist/index.js"]
+ENTRYPOINT [ "node", "dist/app.js"]
