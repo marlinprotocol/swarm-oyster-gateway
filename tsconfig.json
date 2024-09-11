@@ -1,5 +1,6 @@
 {
-  "include": ["src"],
+  "include": ["src", "src/index.ts"],
+  "exclude": ["node_modules", "dist", "test"],
   "compilerOptions": {
     "alwaysStrict": true,
     "target": "ES6",
