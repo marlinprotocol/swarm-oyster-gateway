@@ -14,26 +14,17 @@
     "node"
   ],
   "bin": {
-    "bee-gateway-proxy": "dist/index.js"
+    "bee-gateway-proxy": "dist/app.js"
   },
-  "main": "dist/index.js",
+  "main": "dist/app.js",
   "files": [
     "dist"
   ],
-  "pkg": {
-    "scripts": [
-      "dist/**/*.js",
-      "node_modules/axios/**/*"
-    ],
-    "assets": [
-      "node_modules/axios/**/*"
-    ]
-  },
   "scripts": {
     "prepare": "npm run build",
-    "build": "rimraf ./build && tsc && chmod +x dist/index.js",
-    "start": "nodemon --config nodemon.json src/index.ts",
-    "start:debug": "nodemon --config nodemon.json --inspect-brk src/index.ts",
+    "build": "rimraf ./build && tsc && chmod +x dist/app.js",
+    "start": "nodemon --config nodemon.json src/app.ts",
+    "start:debug": "nodemon --config nodemon.json --inspect-brk src/app.ts",
     "lint": "eslint --fix \"src/**/*.ts\" \"test/**/*.ts\" && prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint:check": "eslint \"src/**/*.ts\" \"test/**/*.ts\" && prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
     "depcheck": "depcheck .",
@@ -55,13 +46,13 @@
     "@typescript-eslint/parser": "^5.38.1",
     "depcheck": "^1.4.3",
     "eslint": "^8.24.0",
-    "pkg": "^5.8.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^27.0.4",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
     "jest": "^27.5.1",
+    "pkg": "^5.8.1",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
@@ -88,7 +79,7 @@
   },
   "node_deb": {
     "entrypoints": {
-      "daemon": "dist/index.js"
+      "daemon": "dist/app.js"
     },
     "init": "systemd",
     "install_strategy": "copy",
