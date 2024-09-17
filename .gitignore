@@ -33,3 +33,4 @@ docs
 app
 config.json
 enclave
+package-lock.json
