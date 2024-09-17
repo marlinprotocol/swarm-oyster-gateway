@@ -1,20 +1,10 @@
-FROM node:lts-bullseye-slim as base
+FROM marlinorg/nitro-cli
 
-WORKDIR /app
+WORKDIR /app/setup
 
-COPY . .
+COPY entrypoint.sh ./
+RUN chmod +x entrypoint.sh
 
-RUN npm ci
+COPY setup/ ./
 
-RUN npm run build
-
-FROM node:lts-bullseye-slim
-
-WORKDIR /app
-COPY --from=base --chown=nobody:nogroup /app/dist dist
-COPY --from=base --chown=nobody:nogroup /app/public public
-COPY --from=base --chown=nobody:nogroup /app/node_modules node_modules
-USER nobody
-EXPOSE 3000
-
-ENTRYPOINT [ "node", "dist/app.js"]
+ENTRYPOINT ["/app/setup/entrypoint.sh"]
